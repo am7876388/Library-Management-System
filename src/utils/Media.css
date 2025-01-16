@@ -1,0 +1,49 @@
+@media(min-width:769px){
+    html{
+        font-size:1vw;
+    } 
+#Responsive_Button{
+    display:none;
+}
+#Remaining-Buttons{
+display:flex;
+}
+
+#Footer-Buttons{
+    width:29%;
+}
+}
+@media(min-width:425px) and (max-width:768px) {
+html{
+    font-size:1.3vw;
+}
+.Books{
+width:30%;
+}
+#Footer-Buttons{
+width:37%;
+}
+#Responsive_Button{
+    display:block;
+}
+#Remaining-Buttons{
+display:none;
+}
+}
+@media(max-width:424px) {
+html{
+font-size:2vw;
+}
+#Footer-Buttons{
+width:60%;
+}
+.Books{
+    width:45%;
+}
+#Responsive_Button{
+    display:block;
+}
+#Remaining-Buttons{
+display:none;
+}
+}

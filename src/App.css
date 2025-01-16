@@ -1,0 +1,444 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html{
+  width: 100vw;
+  height: 100vh;
+  font-family:Poppins;
+  overflow-x:hidden;
+}
+body{
+  width:100%;
+  height:100%;
+}
+#root{
+  width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+}
+nav{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+  color: #fff;
+  background-color:#1a1a2e;
+}
+#Remaining-Buttons{
+  display: flex;
+  width: 30%;
+  justify-content: space-evenly;
+}
+.Nav_Buttons{
+  background: transparent;
+  border: none;
+  font-size:1.3rem;
+}
+.Nav_Links{
+  text-decoration: none;
+  color: #fff;;
+}
+#Company-Name{
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+  margin-left:2rem;
+}
+#ImageAndInfo{
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.ImageData{
+  width:100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  font-size: 5rem;
+}
+.ImageData img{
+  width:50rem;
+  height:50rem;
+}
+#Category_Heading{
+  width: 100%;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 4rem;
+}
+#Categories{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.Categories_Buttons{
+  width: 8rem;
+  padding: 1rem;
+  font-size: 1rem;
+  border-radius: 3rem;
+  border:#ccc solid 0.1rem;
+  background-color:#e0e0e0;
+  color:#333;
+  margin:0 0.4rem;
+  transition: 0.3s all;
+  cursor: pointer !important;
+}
+.Categories_Buttons:hover{
+  background-color: #b0b0b0;
+  color: #fff;
+  border-color:#888;
+  box-shadow: 0 0.4rem 0.6rem rgba(0, 0,0,0.3);
+}
+#PopularBooks{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 1.5rem 0;
+}
+#View_More{
+  margin: 0 4rem;
+  font-size:1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:#1a73e8;
+  text-decoration:none;
+  font-weight:600;
+}
+#View_More:hover{
+  color:#0056b3;
+  transform: translateY(0.3rem);
+}
+#PopularBooks div{
+  font-size: 2rem;
+  font-weight:bold;
+  margin-right:4rem;
+  color: #1a1a2e;
+}
+#ListofBooks{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap:3rem;
+  padding-left:4rem;
+  margin-bottom: 2rem;
+  box-sizing:border-box;
+}
+.Books{
+  width:21%;
+  height:fit-content;
+  background-color:#fff;
+  border-radius:0.8rem;
+  border:solid 0.1rem #e0e0e0;
+  padding: 1rem;
+  box-shadow: 0 0.4rem 0.8rem rgba(0,0,0,0.1);
+  box-sizing:border-box;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.Books:hover{
+  background-color: #f9f9f9;
+  box-shadow: 0 0.6rem 1.2rem rgba(0,0,0,0.15);
+  transform:translateY(-0.5rem);
+}
+.Books img{
+width:100%;
+height:15rem;
+border-radius:0.4rem;
+margin-bottom:1.5rem;
+}
+.Books_name{
+  width: 100%;
+  font-size:1.2rem;
+  font-weight:bold;
+  color:#333;
+  margin-bottom:1rem;
+}
+.Books_Author{
+  display: flex;
+  align-items: center;
+  margin-bottom:0.8rem;
+}
+.Author_Name{
+  font-size:1.1rem;
+  font-weight:normal;
+  margin-left:1rem;
+  color: rgb(60,60,60);
+}
+.Author{
+  width:fit-content;
+  background-color:rgb(250,250,250);
+  text-align: center;
+  color:rgb(0,92,204);
+  border:solid 0.2rem rgb(170,200,250);
+  font-size: 1.2rem;
+  padding: 0.6rem 1rem;
+  border-radius:0.5rem;
+  box-shadow: 0 0.2rem 0.6rem rgba(0,0,0,0.1);
+}
+.Books_Description{
+  line-height:1.6;
+  color:rgb(80,80,80);
+  background-color: rgb(245, 245,245);
+  padding: 1rem;
+  border: solid 0.1rem rgb(220,220,220);
+  border-radius:0.5rem;
+  max-height:6rem;
+  overflow: auto;
+  font-size:1rem;
+  box-shadow:0 0.1rem 0.3rem rgba(0,0,0,0.1);
+}
+.Books_Rating{
+  font-size: 1.2rem;
+  color: rgb(8,102,255);
+  font-weight: bold;
+  margin-top:0.5rem;
+}
+.Button_Container{
+  display: flex;
+  justify-content: end;
+}
+.Books_View_Details{
+  background-color:rgb(8,102,255);
+  color:white;
+  padding:0.8rem 1.5rem;
+  font-size:1rem;
+  font-weight:bold;
+  border-radius:0.5rem;
+  border:none;
+  cursor:pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+.Books_View_Details:hover{
+  background-color:rgb(0,84,180);
+  transform:scale(1.05);
+}
+footer{
+  margin-top:auto;
+  padding: 1rem;
+  background-color:#444444;
+  color: #ffffff;
+}
+#Logo{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-left: 2.5rem;
+  font-weight:600;
+}
+#Footer-Buttons{
+  width:30%;
+  display: flex;
+  justify-content: space-evenly;
+}
+#Search_Container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+#Search_Container input{
+  width:35rem;
+  padding:0.6rem 1rem;
+  font-size:1rem;
+  border:0.2rem solid #ccc;
+  border-radius:0.5rem;
+  background-color:#fff;
+  color:#333;
+  outline:none;
+}
+#AddBookForm_Container{
+  width:100%;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+#AddBookForm{
+  width: 30rem;
+}
+#Title{
+width:100%;
+font-size: 2rem;
+font-weight:600;
+text-align: center;
+}
+.FormFields_Container{
+  width:100%;
+}
+.FormFields_Label{
+  margin-top: 1rem;
+  font-size:1.5rem;
+}
+.FormFields_Container input{
+  width: 100%;
+  margin-top: 1rem;
+  padding:0.5rem;
+  border:solid 0.15rem black;
+}
+#Image_Info{
+  margin-top: 1rem;
+  font-size: 1.3rem;
+}
+#Image_Info input{
+  font-size: 1.1rem;
+}
+#AddBookForm_Submit{
+  font-size: 1.3rem;
+  padding: 0.3rem 1.5rem;
+  background-color: black;
+  color: #FFFF;
+  border:transparent;
+  margin-top: 1rem;
+}
+#Book_Details{
+  display: flex;
+  padding:2rem;
+  margin-left:2.5rem;
+}
+#Book_Details h1{
+  font-size: 2rem;
+  font-weight:700;
+  color:#333;
+  margin-bottom:1rem;
+}
+#Book_Details p{
+  max-width:50%;
+  font-size: 1rem;
+  color:#555;
+  line-height:1.6;
+  margin-bottom:1.5rem;
+}
+#Book_Image{
+  width:18rem;
+  height:18rem;
+  border-radius:1rem;
+  box-shadow:0 0.4rem 0.8rem rgba(0,0,0,0.2);
+  margin-right: 1rem;
+}
+#Author_Name{
+  display: flex;
+  gap:0.5rem;
+  font-size: 1rem;
+  align-items: center;
+  color:#0077b6;
+  font-weight:400;
+}
+#Author_Name div{
+  color:#1a1a2e;
+  font-weight:600;
+}
+#Book_Ratings{
+  font-size:1.3rem;
+  margin-top: 1rem;
+}
+#Back{
+  padding-left: 4rem;
+}
+#Back img{
+  width:2.5rem;
+  height:2.5rem;
+  object-fit:contain;
+  transition:all 0.2s ease-in-out;
+}
+#Back img:hover{
+  transform:translateX(-0.5rem);
+}
+#NotFound_Container{
+  width:100%;
+  height:100vh;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  background-color:#f4f4f4;
+  font-family: 'Arial',sans-serif;
+  color:#333;
+  flex-direction: column;
+}
+#Notfound{
+  background-color:#fff;
+  padding:2rem;
+  border-radius:1rem;
+  width:100%;
+  box-shadow: 0 0.4rem 1.2rem rgba(0,0,0,0.1);
+}
+#NotFound h1 {
+  font-size: 6rem;
+  color: #e63946;
+  margin-bottom: 1rem;
+}
+#NotFound_Button {
+  font-size: 1.2rem;
+  padding: 0.8rem 2rem;
+  background-color: #1a1a2e;
+  color: #fff;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#NotFound_Button:hover {
+  background-color: #0077b6;
+}
+#Welcome_Container{
+  max-width:50rem;
+  margin:5rem auto;
+  padding:2rem;
+  background-color:rgba(255,255,255,0.8);
+  border-radius:1.5rem;
+  text-align: center;
+  box-shadow: 0 0.8rem 2rem rgba(0,0,0,0.2);
+}
+#Welcome_Container h1{
+  font-size:2.5rem;
+  font-weight:bold;
+  color:#1a1a2e;
+  margin-bottom:1rem;
+}
+#Welcome_Container p{
+font-size:1.2rem;
+line-height:1.8;
+color:#333;
+margin:1rem 0;
+}
+#Welcome_Button{
+  margin-top:1.5rem;
+  padding:0.8rem 2rem;
+  border:none;
+  background-color:#ff5722;
+  color:#fff;
+  font-size:1.2rem;
+  font-weight:bold;
+  border-radius:1rem;
+  cursor: pointer;
+  box-shadow:0 0.4rem 1rem rgba(0,0,0, 0.2);
+  transition: all 0.3s ease;
+}
+#Welcome_Button:hover{
+  background-color:#e64a19;
+  transform:scale(1.05);
+}
+#Responsive_NAV{
+  display:none;
+  background-color: #16213e;
+  color: #ffffff;
+  padding: 1rem 0;
+  box-shadow: 0 0.4rem 0.8rem rgba(0, 0, 0, 0.2);
+}
+#Responsive_NAV li{
+  padding:1rem 2rem;
+}
+#Menu-img{
+  width:3rem;
+  height:3rem;
+}
+#Responsive_Button{
+  margin-right:2rem;
+  border:none;
+  background:transparent;
+}
