@@ -1,19 +1,20 @@
-import { useNavigate } from "react-router-dom";
-import NavigationBar from "./NaviagtionBar";
-import { useDispatch, useSelector } from "react-redux";
-function AddBookForm(){
+import { useNavigate } from "react-router-dom";//Importing Hooks
+import NavigationBar from "../Header/NaviagtionBar";//Importing Components
+import { useDispatch, useSelector } from "react-redux";//Importing Hooks
+import { Add } from "../../utils/Store";//Importing Functions from store
+import "./AddBook.css"//Importing Styles
+function AddBookForm(){//This function contains the Add book form
     const dispatch = useDispatch();
     const Data = useSelector((state) => state.data);
     const navigate = useNavigate();
-    console.log(Data);
     function AddingBook(){
         const Title = document.getElementById("Book_Title").value;
         const Author = document.getElementById("Book_Author").value;
         const Rating = document.getElementById("Book_Rating").value;
         const Description = document.getElementById("Book_Description").value;
         const I = document.getElementById("image").files[0];
-        const Image = URL.createObjectURL(I);
-        const Object = {
+        const Image = (I)?URL.createObjectURL(I):I;
+        const Object = {//Object is created to push it into the array
         Name:Title,
         Author:Author,
         Description:Description,
@@ -22,9 +23,8 @@ function AddBookForm(){
         image:Image
         }
         if(Title && Author && Rating && Description && Image){
-        if(Rating >= 0 && Rating <= 5){
-            dispatch({type:"ADD",payload:Object});
-        console.log(Data);
+        if(Rating >= 0 && Rating <= 5){//Checking the conditions
+        dispatch(Add(Object));
         navigate("/Browse");
     }
     else{

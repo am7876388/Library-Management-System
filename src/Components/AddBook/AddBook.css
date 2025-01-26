@@ -1,0 +1,56 @@
+#AddBookForm_Container{
+    width:100%;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+  #AddBookForm{
+    width: 30rem;
+  }
+  #Title{
+  width:100%;
+  font-size: 2rem;
+  font-weight:600;
+  text-align: center;
+  }
+  .FormFields_Container{
+    width:100%;
+  }
+  .FormFields_Label{
+    margin-top: 1rem;
+    font-size:1.5rem;
+  }
+  .FormFields_Container input{
+    width: 100%;
+    margin-top: 1rem;
+    padding:0.5rem;
+    border:solid 0.15rem black;
+  }
+  #Image_Info{
+    margin-top: 1rem;
+    font-size: 1.3rem;
+  }
+  #Image_Info input{
+    font-size: 1.1rem;
+  }
+  #AddBookForm_Submit{
+    font-size: 1.3rem;
+    padding: 0.3rem 1.5rem;
+    background-color: black;
+    color: #FFFF;
+    border:transparent;
+    margin-top: 1rem;
+  }
+  #Back{
+    padding-left: 4rem;
+  }
+  #Back img{
+    width:2.5rem;
+    height:2.5rem;
+    object-fit:contain;
+    transition:all 0.2s ease-in-out;
+  }
+  #Back img:hover{
+    transform:translateX(-0.5rem);
+  }
+  

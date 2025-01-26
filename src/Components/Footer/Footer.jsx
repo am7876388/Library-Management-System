@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";//Importing function
+import "./Footer.css"//Importing Styles
 function Footer(){
     return(<>
     <footer id="Footer">
@@ -7,4 +8,4 @@ function Footer(){
     </footer>
     </>)
 }
-export default Footer;
+export default Footer;//exporting function

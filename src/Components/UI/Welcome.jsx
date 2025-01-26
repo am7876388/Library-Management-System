@@ -1,3 +1,4 @@
+import "./UI.css"
 function Welcome(props){
     const Click = props.Clicking;
     return(<>

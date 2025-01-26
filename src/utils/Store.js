@@ -1,41 +1,54 @@
-import {configureStore} from "@reduxjs/toolkit"
-import Data from "./Data"
-const setinitial = (state = Data,action) =>{
-if(action.type === "ADD") {return [...state,action.payload]};
-return state;
-}
-const Mode = (state = 0, action) =>{
-switch(action.type){
-    case "Change":
-        return 1;
-    case "Reset":
-        return 0;
-    default:
-        return state;
-}
-}
-const Welcome = (state = false, action) =>{
-    switch(action.type){
-        case "Done":
-            return true
-        default:
-            return state;
+import {configureStore, createSlice} from "@reduxjs/toolkit"//Importing the functions from redux
+import Data from "./Data"//Importing Default data;
+const setinitial = createSlice({//Creating Slices of Data
+    name:"setinitial",
+    initialState:Data,
+    reducers:{
+    Add:(state,action) =>{
+        state.push(action.payload)
     }
-}
-const SearchValue = (state = "",action) =>{
-if(action.type === "Update"){
-    return action.payload;
-}
-else{
-    return state;
-}
-}
-const Store = configureStore({
+    }
+})
+const Mode = createSlice({
+    name:"Mode",
+    initialState:0,
+    reducers:{
+    Change:(state) =>{
+        return 1;
+    },
+    Reset:(state) =>{
+        return 0;
+    }
+    }
+})
+const Welcome = createSlice({
+    name:"Welcome",
+    initialState:false,
+    reducers:{
+    Done:(state) =>{
+    return true;
+    }
+    }
+})
+const SearchValue = createSlice({
+    name:"SearchValue",
+    initialState:"",
+    reducers:{
+    Update:(state,action) =>{
+        return action.payload;
+    }
+    }
+})
+export const{Add} = setinitial.actions;//Exporting all the reducer functions
+export const{Change,Reset} = Mode.actions;
+export const{Done} = Welcome.actions;
+export const{Update} = SearchValue.actions
+const Store = configureStore({//Configuring the Store
     reducer:{
-        data:setinitial,
-        mode:Mode,
-        search:SearchValue,
-        WelcomeM:Welcome
+        data:setinitial.reducer,
+        mode:Mode.reducer,
+        search:SearchValue.reducer,
+        WelcomeM:Welcome.reducer
     },
 });
 export default Store;

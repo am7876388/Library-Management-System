@@ -1,49 +1,49 @@
 @media(min-width:769px){
     html{
-        font-size:1vw;
+        font-size:1vw!important ;
     } 
 #Responsive_Button{
-    display:none;
+    display:none!important ;
 }
 #Remaining-Buttons{
-display:flex;
+display:flex!important ;
 }
 
 #Footer-Buttons{
-    width:29%;
+    width:29%!important ;
 }
 }
 @media(min-width:425px) and (max-width:768px) {
 html{
-    font-size:1.3vw;
+    font-size:1.3vw!important ;
 }
 .Books{
-width:30%;
+width:30%!important ;
 }
 #Footer-Buttons{
-width:37%;
+width:37%!important ;
 }
 #Responsive_Button{
-    display:block;
+    display:block!important ;
 }
 #Remaining-Buttons{
-display:none;
+display:none!important ;
 }
 }
 @media(max-width:424px) {
 html{
-font-size:2vw;
+font-size:2vw!important ;
 }
 #Footer-Buttons{
-width:60%;
+width:60%!important ;
 }
 .Books{
-    width:45%;
+    width:45%!important ;
 }
 #Responsive_Button{
-    display:block;
+    display:block!important ;
 }
 #Remaining-Buttons{
-display:none;
+display:none!important ;
 }
 }

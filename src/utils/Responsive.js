@@ -1,6 +1,6 @@
-import Menu from "../assets/Burger-Menu.svg";
-import Cross from "../assets/Cross.svg";
-function Responsives(e){
+import Menu from "../assets/Burger-Menu.svg";//Importing Images
+import Cross from "../assets/Cross.svg";//Importing Images
+function Responsives(e){//A function to make the webpage responsive
 const num1 = e.target;
 const num2 = document.getElementById("Responsive_NAV");
 console.log(num1);
@@ -15,4 +15,4 @@ num2.style.display = "none";
 num1.setAttribute("src",Menu);
 }    
 }
-export default Responsives;
+export default Responsives;//Default exporting the functions

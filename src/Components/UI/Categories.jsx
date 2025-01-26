@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";//Importing Hooks
 function Categories(){
     const navigate = useNavigate();
     return(<div id="Category_of_Books">

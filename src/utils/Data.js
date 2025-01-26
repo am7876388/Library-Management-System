@@ -1,12 +1,12 @@
-import One from "../assets/1984.jpeg"
-import Catcher from "../assets/Catcher.jpg"
-import Hobbit from "../assets/Hobbit.png"
-import Dragon from "../assets/Dragon.png"
-import Dune from "../assets/Dune.png"
-import Harry from "../assets/Harry.png"
-import Gone from "../assets/Gone.png"
-import Martian from "../assets/Martian.png"
-const Data = [
+import One from "../assets/1984.jpeg"//Importing Images
+import Catcher from "../assets/Catcher.jpg"//Importing Images
+import Hobbit from "../assets/Hobbit.png"//Importing Images
+import Dragon from "../assets/Dragon.png"//Importing Images
+import Dune from "../assets/Dune.png"//Importing Images
+import Harry from "../assets/Harry.png"//Importing Images
+import Gone from "../assets/Gone.png"//Importing Images
+import Martian from "../assets/Martian.png"//Importing Images
+const Data = [//It contains default Data of books
     {
         Name: "The Catcher in the Rye",
         Author: "J.D. Salinger",

@@ -1,8 +1,8 @@
-import { Link } from "react-router-dom";
-import Back from "../assets/Back.svg";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
-function Details(props){
+import { Link } from "react-router-dom";//Importing Functions
+import Back from "../../assets/Back.svg";//Importing Components
+import { useSelector } from "react-redux";//Importing Hooks
+import { useEffect } from "react";//Importing Hooks
+function Details(props){//Using Hooks
     const id = props.id;
     const Data = useSelector((state) => state.data);
     (useEffect(() =>{

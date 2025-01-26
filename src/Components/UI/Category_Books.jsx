@@ -1,7 +1,7 @@
-import { useSelector } from "react-redux";
-import NavigationBar from "./NaviagtionBar";
-import { useNavigate, useParams } from "react-router-dom";
-function BooksCategory(){
+import { useSelector } from "react-redux";//Importing Hooks
+import NavigationBar from "../Header/NaviagtionBar";//Importing Components
+import { useNavigate, useParams } from "react-router-dom";//Importing Hooks
+function BooksCategory(){//Books Category Function
     const Datas = useSelector((state) => state.data);
     const Navigate = useNavigate();
     const {Category} = useParams()
@@ -15,7 +15,7 @@ function BooksCategory(){
         {Category === "New" ? (
           <div id="PopularBooks"><div>{Category} Books</div></div>  
         ):(<div id="PopularBooks"><div>Books on {Category}</div></div>)}{
-        Datas.map((data,index) =>{
+        Datas.map((data,index) =>{//Using Map to produce all the results dynamically
         if(data.Category === Category){
         return(
             <div className="Books" id={index} key={index + 1}>
@@ -35,4 +35,4 @@ function BooksCategory(){
 
     </>)
 }
-export default BooksCategory;
+export default BooksCategory;//Default Exporting function
