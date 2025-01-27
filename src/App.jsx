@@ -28,7 +28,6 @@ function App() {
        <Route path='/AddBook' element = {<AddBookForm/>}/>
        <Route path='/Details/:id' element = {<DynamicRouting/>}/>
        <Route path='/Books/:Category' element = {<BooksCategory/>}/>
-       <Route path='/Welcome' element = {<Welcome/>}/>
        <Route path='/*' element = {<NotFound/>}/>
       </Routes>
   )

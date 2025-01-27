@@ -40,6 +40,12 @@
     color: #FFFF;
     border:transparent;
     margin-top: 1rem;
+    transition: all 0.3s ease;
+  }
+  #AddBookForm_Submit:hover{
+  cursor: pointer;
+  background-color:grey;
+  color:black;
   }
   #Back{
     padding-left: 4rem;

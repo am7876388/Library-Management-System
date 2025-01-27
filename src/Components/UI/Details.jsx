@@ -15,7 +15,7 @@ function Details(props){//Using Hooks
             <div id="Book_OtherPart"><h1>Title: {Data[id].Name}</h1>
             <p>Description : {Data[id].Description}</p>
             <div id="Author_Name"><div>Author</div>: {Data[id].Author}</div>
-            <div id="Book_Ratings">{Data[id].Ratings}</div></div>
+            <div id="Book_Ratings">Ratings: {Data[id].Rating}</div></div>
         </div></>)
 }
 export default Details;

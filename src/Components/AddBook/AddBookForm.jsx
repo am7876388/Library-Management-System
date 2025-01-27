@@ -12,19 +12,23 @@ function AddBookForm(){//This function contains the Add book form
         const Author = document.getElementById("Book_Author").value;
         const Rating = document.getElementById("Book_Rating").value;
         const Description = document.getElementById("Book_Description").value;
+        const Category = document.getElementById("Book_Category").value;
         const I = document.getElementById("image").files[0];
+        const Categories = ["Fiction","Science","Fantasy","Crime"]
+        const num1 = Categories.findIndex(elem => elem.toLowerCase() === Category.toLowerCase());
+        const num2 = (num1 !== -1)?Categories[num1]:"New"
         const Image = (I)?URL.createObjectURL(I):I;
-        const Object = {//Object is created to push it into the array
+        const Objects = {//Object is created to push it into the array
         Name:Title,
         Author:Author,
         Description:Description,
         Rating:Rating,
-        Category:"New",
+        Category:num2,
         image:Image
         }
-        if(Title && Author && Rating && Description && Image){
+        if(Title && Author && Rating && Description && Image && Category){
         if(Rating >= 0 && Rating <= 5){//Checking the conditions
-        dispatch(Add(Object));
+        dispatch(Add(Objects));
         navigate("/Browse");
     }
     else{
@@ -55,6 +59,10 @@ function AddBookForm(){//This function contains the Add book form
         <div className="FormFields_Container">
             <div className="FormFields_Label">Ratings</div>
             <input type="number" id="Book_Rating" placeholder="Rating"/>
+        </div>
+        <div className="FormFields_Container">
+            <div className="FormFields_Label">Category</div>
+            <input type="text" id="Book_Category" placeholder="Category"/>
         </div>
         <div id="Image_Info"> Upload a Image <input type="file" name="" id="image" /></div>
         <button id="AddBookForm_Submit" onClick={AddingBook}>Submit</button>

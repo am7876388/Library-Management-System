@@ -1,5 +1,5 @@
-import "./UI.css"
-function Welcome(props){
+import "./UI.css"//Importing styles from UI.css
+function Welcome(props){//Using props to get a function
     const Click = props.Clicking;
     return(<>
     <div id="Welcome_Container">
@@ -9,6 +9,6 @@ function Welcome(props){
     <p>Ready to Embark your litreary Adventure ? Start Browsing Now!</p>
     <button id="Welcome_Button" onClick={Click}>Browse Books</button>
     </div>
-    </>)
+    </>)//Entire Welcome Message
 }
 export default Welcome;
