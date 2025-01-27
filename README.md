@@ -1,8 +1,5 @@
 # 📚 Online Library Management System  
-**[→ View GitHub Repository](https://github.com/am7876388/Library-Management-System)**  
-
-![Library System Demo](https://via.placeholder.com/800x400.png?text=Library+Management+Demo)  
-*Add actual screenshots of your interface here*
+**[→ View GitHub Repository](https://github.com/am7876388/Library-Management-System)**
 
 ## 🌟 Features  
 ### **1. Home Page**  
